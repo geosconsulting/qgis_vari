@@ -18,7 +18,7 @@ class MyDialog(QDialog):
         self.ok_btn.clicked.connect(self.accept)
         
         self.cancel_btn =QPushButton("Cancel",self)
-        self.ok_btn.clicked.connect(self.reject)
+        self.cancel_btn.clicked.connect(self.reject)
         
         btn_layout = QHBoxLayout(self)
         btn_layout.addWidget(self.ok_btn)
