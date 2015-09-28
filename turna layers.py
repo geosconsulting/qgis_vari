@@ -9,9 +9,8 @@ provider = registry.provider("ogr",r"D:\temporaggi\nathearth\ne_50m_admin_0_coun
 if not provider.isValid():
     print "Invalido"
 
-
 for field in provider.fields():
-    print field.name(),field.typeName()
+    print field.name(), field.typeName()
        
 for feature in provider.getFeatures(QgsFeatureRequest()):
     print feature.attribute("region_wb")

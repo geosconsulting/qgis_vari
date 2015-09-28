@@ -18,7 +18,8 @@ def analyze_shapefile():
         
     attr_names=[]
     for field in provider.fields():
-        attr_names.append(field.name())
+        attr_names.append(field.name())    
+        QgsMessageLog.logMessage("%s, %s"% (field.name(),field.type()),tag="SPARC")
         
     tot_length = 0
     tot_area = 0
@@ -55,6 +56,7 @@ def analyze_shapefile():
             geom_type = qgis.vectorGeometryType(geometry.type())
             feature_info = "geometry of type %s" % geom_type
         
+        #Programma iniziale che mostra area per paese
         QgsMessageLog.logMessage("%s: %s" % (feature_label,feature_info),tag="SPARC")
     
     #Status bar in basso sulla finestra principale...poco efficace
