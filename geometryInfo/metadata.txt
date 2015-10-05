@@ -1,0 +1,8 @@
+[general]
+name=Geometry Info
+email=pippo@pippo.it
+author=io
+qgisMinimumVersion=2.0
+description=Display Info about clicked geometry
+about= Chapter 4 example
+version=version 0.1
